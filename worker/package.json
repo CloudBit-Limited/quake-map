@@ -5,9 +5,11 @@
   "module": "./dist/index.mjs",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "npm test",
     "build": "npx rollup -c",
     "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "publish": "wrangler publish"    
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
