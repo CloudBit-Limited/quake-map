@@ -4,6 +4,7 @@ import { terser } from 'rollup-plugin-terser'
 // for more details.
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import svelte from 'rollup-plugin-svelte';
 
 export default {
   input: 'src/index.js',
@@ -20,5 +21,6 @@ export default {
       browser: true,
     }),
     terser(),
+    svelte()
   ],
 }

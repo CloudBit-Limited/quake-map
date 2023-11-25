@@ -1,6 +1,11 @@
 import {getService} from './quake-service.js';
+import App from '../../ui/src/App.svelte';
 
 export {QuakeService} from './quake-service.js';
+
+const app = new App({
+  target: document.body
+});
 
 export default {
   async fetch(request, env) {
